@@ -1,0 +1,132 @@
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+
+  .city-info {
+    text-align: center;
+    margin-bottom: 1rem;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+
+  .weather-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .current-weather {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 5rem;
+
+      .icon {
+        margin-bottom: 1rem;
+
+        img {
+          width: 6rem;
+        }
+      }
+
+      .temperature {
+        text-align: center;
+
+        h3 {
+          font-size: 3.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .extra-weather {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .weather-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 15rem;
+        margin-bottom: 1rem;
+
+        .weather-label {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        .weather-value {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .forecast {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hourly-forecast,
+    .daily-forecast {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .hourly-weather,
+      .daily-weather {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+
+        .time,
+        .day {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .icon {
+          margin-bottom: 0.5rem;
+
+          img {
+            width: 4rem;
+          }
+        }
+
+        .temperature {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

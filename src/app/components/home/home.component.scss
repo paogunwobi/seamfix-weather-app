@@ -1,0 +1,59 @@
+.card {
+  margin-top: 2rem;
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: none;
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.card-subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #6c757d;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-subtitle {
+    font-size: 1rem;
+  }
+}
+
+.form-control {
+  width: 100%;
+}
+
+.btn-primary {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.btn {
+  width: 100% !important;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-primary {
+    width: auto;
+  }
+}

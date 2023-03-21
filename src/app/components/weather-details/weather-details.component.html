@@ -1,0 +1,60 @@
+<div class="weather-details">
+  <div class="city-info">
+    <h2>{{ location }}</h2>
+    <p>{{ date | date: 'medium' }}</p>
+  </div>
+
+  <div class="weather-info">
+    <div class="current-weather">
+      <div class="icon">
+        <img [src]="weather.icon" [alt]="weather.description" />
+      </div>
+      <div class="temperature">
+        <h3>{{ weather.temperature }}&deg;C</h3>
+        <p>{{ weather.description }}</p>
+      </div>
+    </div>
+
+    <div class="extra-weather">
+      <div class="weather-item">
+        <div class="weather-label">Sunrise:</div>
+        <div class="weather-value">{{ sunrise | date: 'shortTime' }}</div>
+      </div>
+      <div class="weather-item">
+        <div class="weather-label">Sunset:</div>
+        <div class="weather-value">{{ sunset | date: 'shortTime' }}</div>
+      </div>
+      <div class="weather-item">
+        <div class="weather-label">Humidity:</div>
+        <div class="weather-value">{{ weather.humidity }}%</div>
+      </div>
+      <div class="weather-item">
+        <div class="weather-label">Wind Speed:</div>
+        <div class="weather-value">{{ weather.windSpeed }} km/h</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="forecast">
+    <h3>Hourly Forecast</h3>
+    <div class="hourly-forecast">
+      <div *ngFor="let hourly of hourlyForecast" class="hourly-weather">
+        <p class="time">{{ hourly.time | date: 'shortTime' }}</p>
+        <div class="icon">
+          <img [src]="hourly.icon" [alt]="hourly.description" />
+        </div>
+        <p class="temperature">{{ hourly.temperature }}&deg;C</p>
+      </div>
+    </div>
+    <h3>Daily Forecast</h3>
+    <div class="daily-forecast">
+      <div *ngFor="let daily of dailyForecast" class="daily-weather">
+        <p class="day">{{ daily.dayOfWeek }}</p>
+        <div class="icon">
+          <img [src]="daily.icon" [alt]="daily.description" />
+        </div>
+        <p class="temperature">{{ daily.temperatureLow }}&deg;C - {{ daily.temperatureHigh }}&deg;C</p>
+      </div>
+    </div>
+  </div>
+</div>
